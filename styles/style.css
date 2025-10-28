@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #ffebbb;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container {
+    display: flex;
+    gap: 12px;
+    max-width: 1100px;
+    width: 100%;
+    height: 560px;
+}
+
+.tools-board {
+    width: 230px;
+    background-color: #fdfdfd;
+    border-radius: 14px;
+    padding: 18px 22px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.tools-board .row {
+    margin-bottom: 18px;
+}
+
+.title {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: 0.2s ease;
+}
+
+.option span {
+    margin-left: 8px;
+}
+
+.colors .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+#color-picker {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* picker circle shows chosen color */
+#color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+#color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+
+#size-slider {
+    width: 100%;
+    margin-top: 6px;
+}
+
+#fill-color {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.buttons button {
+    width: 100%;
+    background: none;
+    color: black;
+    border: 2px solid #000;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.clear-canvas:hover {
+    background: #6c757d;
+    color: #fff;
+}
+
+.drawing-board {
+    flex: 1;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 14px;
+}
